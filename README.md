@@ -6,3 +6,5 @@ This is actually a text classfication task. The main idea of this project is peo
 `pip install scikit-learn pandas numpy nltk xgboost pickle flask`
 
 `python app.py`
+
+![Logo](docterai.png)
