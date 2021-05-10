@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI For Disease Diagnose</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+  <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+</head>
+
+<body>
+ <div class="container">
+    <h1>Disease Diagnose</h1>
+    <h4>Please,  tell your symptom</h4>
+    <form action="{{url_for('predict')}}" method="post">
+      <div class="form-group">
+        <label for="symptom">Symptom:</label>
+        <textarea class="form-control" type="text" name="symptom" placeholder="Please, tell us your symptom" required="required"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Predict sales in third month</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+ </div>
+
+
+</body>
+</html>
